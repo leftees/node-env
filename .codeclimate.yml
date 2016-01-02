@@ -1,0 +1,21 @@
+engines:
+	rubocop:
+		enabled: false
+	golint:
+		enabled: true
+	gofmt:
+		enabled: true
+	eslint:
+		enabled: true
+	csslint:
+		enabled: true
+	ratings:
+		paths:
+		- app-build/**
+		- routes/**
+		- bin/**
+		- views/**
+	exclude_paths:
+	- bower_components
+	- node_modules
+	- public/**
