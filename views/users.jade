@@ -1,0 +1,49 @@
+extends layout
+
+block content
+
+	div#app
+		h1.
+			Skills: {{ skill }}
+		input(type=number,v-model='points')
+
+		h2.
+			{{ fullName }}
+		input(v-model='first',placeholder='{{ first }}')
+		input(v-model='last',placeholder='{{ last }}')
+
+
+	script(type='text/javascript').
+		new Vue({
+			el: '#app',
+			
+			data: {
+				points: 500,
+				first: 'Pablo Henrique',
+				last: 'Silva',
+				//- fullName: 'Pablo Henrique Silva'
+			},
+
+			computed: {
+				skill: function() {
+					if(this.points <= 100){
+						return 'Beginner';
+					} else if(this.points <= 500){
+						return 'Intermediate';
+					}
+					return 'Advanced';
+				},
+				fullName: function(){
+					return this.first + ' ' + this.last;
+				}
+			},
+
+			//- watch: {
+			//- 	first: function(first){
+			//- 		this.fullName = first + ' ' + this.last;
+			//- 	}, 
+			//- 	last: function(last){
+			//- 		this.fullName = this.first + ' ' + last;
+			//- 	}
+			//- }
+		});

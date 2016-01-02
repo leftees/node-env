@@ -1,0 +1,27 @@
+extends layout
+
+block content
+
+	div#app
+		tasks(:list="tasks")
+
+	template#tasks-template
+		h1
+			'My Tasks'
+			span(v-show='remaining').
+				({{ remaining }})
+		ul(v-show="list.length")
+			li(:class="{ 'completed': task.completed }",
+				v-for='task in list',
+				@click='toggleStatus(task)')
+				{{task.body}}
+				button(@click='deleteTask(task)').
+					remove
+		p(v-else).
+			No tasks yet!
+
+		button(@click='clearCompleted').
+			Clear completed tasks
+
+	script(type='text/javascript').
+		init_tasks.init();
