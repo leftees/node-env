@@ -1,11 +1,6 @@
 engines:
   duplication:
     enabled: true
-    config:
-      languages:
-      - javascript
-      - less
-      - jade
   csslint:
     enabled: true
   fixme:
