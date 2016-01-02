@@ -18,10 +18,10 @@ ratings:
   - "**/*.js"
   - "**/*.less"
   - "**/*.jade"
-languages:
-  - JavaScript: true
-  - Less: true
-  - Jade: true
+#languages:
+#  - JavaScript: true
+#  - Less: true
+#  - Jade: true
 exclude_paths:
   - bower_components/**/*
   - node_modules/**/*
