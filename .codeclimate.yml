@@ -10,11 +10,6 @@ engines:
     enabled: true
   fixme:
     enabled: true
-    config:
-      languages:
-      - javascript
-      - less
-      - jade
   nodesecurity:
     enabled: true
   scss-lint:
