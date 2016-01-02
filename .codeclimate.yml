@@ -23,9 +23,6 @@ engines:
     - Less: true
     - Jade: true
   exclude_paths:
-  - bower_components
-  - bower_components/**
-  - node_modules
-  - node_modules/**
-  - public
-  - public/**
+  - bower_components/**/*
+  - node_modules/**/*
+  - public/**/*
