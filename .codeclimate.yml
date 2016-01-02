@@ -1,10 +1,20 @@
 engines:
   duplication:
     enabled: true
+    config:
+      languages:
+      - javascript
+      - less
+      - jade
   csslint:
     enabled: true
   fixme:
     enabled: true
+    config:
+      languages:
+      - javascript
+      - less
+      - jade
   nodesecurity:
     enabled: true
   scss-lint:
@@ -18,10 +28,6 @@ ratings:
   - "**/*.js"
   - "**/*.less"
   - "**/*.jade"
-languages:
-  - JavaScript: true
-  - Less: true
-  - Jade: true
 exclude_paths:
   - bower_components/**/*
   - node_modules/**/*
