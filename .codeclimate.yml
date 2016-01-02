@@ -1,21 +1,28 @@
 engines:
-  rubocop:
-    enabled: false
-  golint:
-    enabled: true
-  gofmt:
-    enabled: true
-  eslint:
+  duplication:
     enabled: true
   csslint:
     enabled: true
-  ratings:
-    paths:
-    - app-build/**
-    - routes/**
-    - bin/**
-    - views/**
-  exclude_paths:
-  - bower_components
-  - node_modules
-  - public/**
+  fixme:
+    enabled: true
+  nodesecurity:
+    enabled: true
+  scss-lint:
+    enabled: true
+ratings:
+  paths:
+  - app-build/**
+  - routes/**
+  - bin/**
+  - views/**
+  - "**/*.js"
+  - "**/*.less"
+  - "**/*.jade"
+languages:
+  - JavaScript: true
+  - Less: true
+  - Jade: true
+exclude_paths:
+  - bower_components/**/*
+  - node_modules/**/*
+  - public/**/*
