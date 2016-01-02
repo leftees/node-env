@@ -16,9 +16,9 @@ engines:
       - less
       - jade
   nodesecurity:
-    enabled: true
+    enabled: false
   scss-lint:
-    enabled: true
+    enabled: false
 ratings:
   paths:
   - app-build/**
