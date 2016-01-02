@@ -7,21 +7,21 @@ block content
 
 	template#tasks-template
 		h1
-			'My Tasks'
+			'My Tasks' 
 			span(v-show='remaining').
-				({{ remaining }})
+				({{ remaining }}) 
 		ul(v-show="list.length")
 			li(:class="{ 'completed': task.completed }",
 				v-for='task in list',
 				@click='toggleStatus(task)')
-				{{task.body}}
+				{{task.body}} 
 				button(@click='deleteTask(task)').
-					remove
+					remove 
 		p(v-else).
-			No tasks yet!
+			No tasks yet! 
 
 		button(@click='clearCompleted').
-			Clear completed tasks
+			Clear completed tasks 
 
 	script(type='text/javascript').
-		init_tasks.init();
+		init_tasks.init(); 
