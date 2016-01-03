@@ -1,6 +1,5 @@
-require('jquery')
-require('bootstrap')
-require('vue')
+var $ = require('jquery');
+var bootstrap = require('bootstrap');
 
 var Tasks = require('./tasks');
 

@@ -77,6 +77,11 @@ var ProjectJavascript = {
 	app: {
 		// sourcePath: './app-build/app/js/**/*.js',
 		sourcePath: './app-build/app/js/app.js',
+		sourcePath2: [
+			ProjectGulp.config.npmDir + 'vue/dist/vue.js',
+			// ProjectGulp.config.bowerDir + 'bootstrap/dist/js/bootstrap.js',
+			'./app-build/app/js/app.js'
+		],
 		destinationPath: './public/app/js',
 		shimRequired: {
 				jquery: {
@@ -103,8 +108,8 @@ var ProjectJavascript = {
 			'./app.js',
 			'./bin/www'
 		],
-		destinationPath: './app-build/server',
-		outputName: 'server.js'
+		destinationPath: './bin/server',
+		outputName: 'www-c'
 	}
 }
 
@@ -160,9 +165,8 @@ Gulp.task(ProjectGulp.taskNames.nodeserver.js, function(){
 		})
 		.pipe(Plumber())
 		.pipe(Source(ProjectJavascript.nodeserver.outputName))
-		// .pipe(Streamify(Uglify()))
-		.pipe(Buffer())
-		.pipe(Uglify())
+		// .pipe(Buffer())
+		// .pipe(Uglify())
 		.pipe(Gulp.dest(ProjectJavascript.nodeserver.destinationPath))
 		.pipe(Notify(ProjectGulp.notify.success.browserify));
 });
